@@ -4,51 +4,50 @@
 		"appversion" : 		{
 			"major" : 9,
 			"minor" : 0,
-			"revision" : 4,
+			"revision" : 7,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 426.0, 418.0, 733.0, 530.0 ],
+		"rect" : [ 441.0, 347.0, 733.0, 530.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-6",
-					"lastchannelcount" : 0,
-					"maxclass" : "live.gain~",
-					"numinlets" : 2,
-					"numoutlets" : 5,
-					"outlettype" : [ "signal", "signal", "", "float", "list" ],
+					"id" : "obj-11",
+					"maxclass" : "newobj",
+					"numinlets" : 3,
+					"numoutlets" : 1,
+					"outlettype" : [ "multichannelsignal" ],
+					"patching_rect" : [ 62.0, 62.0, 70.0, 22.0 ],
+					"text" : "mc.pack~ 3"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-10",
+					"lastchannelcount" : 3,
+					"maxclass" : "mc.live.gain~",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "multichannelsignal", "", "float", "list" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 62.0, 113.0, 48.0, 58.0 ],
+					"patching_rect" : [ 62.0, 102.0, 48.0, 75.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "live.gain~",
+							"parameter_longname" : "mc.live.gain~[1]",
 							"parameter_mmax" : 6.0,
 							"parameter_mmin" : -70.0,
 							"parameter_modmode" : 3,
-							"parameter_osc_name" : "<default>",
-							"parameter_shortname" : "live.gain~",
+							"parameter_shortname" : "mc.live.gain~[1]",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 4
 						}
 
 					}
 ,
-					"varname" : "live.gain~"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-3",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "multichannelsignal" ],
-					"patching_rect" : [ 62.0, 195.0, 70.0, 22.0 ],
-					"text" : "mc.pack~ 2"
+					"varname" : "mc.live.gain~[1]"
 				}
 
 			}
@@ -57,10 +56,10 @@
 					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "signal", "signal" ],
-					"patching_rect" : [ 62.0, 80.0, 48.0, 22.0 ],
-					"text" : "adc~"
+					"numoutlets" : 3,
+					"outlettype" : [ "signal", "signal", "signal" ],
+					"patching_rect" : [ 62.0, 29.0, 70.0, 22.0 ],
+					"text" : "adc~ 1 2 3"
 				}
 
 			}
@@ -193,80 +192,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 62.0, 28.0, 239.0, 33.0 ],
+					"patching_rect" : [ 205.0, 34.0, 239.0, 33.0 ],
 					"text" : "3 to 6m away from the array converts to \n7 to 4m in SPAT"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-33",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 287.0, 376.0, 75.0, 20.0 ],
-					"text" : "stereo mode"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-29",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"patching_rect" : [ 255.0, 414.0, 29.5, 22.0 ],
-					"text" : "!- 1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-4",
-					"maxclass" : "toggle",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 255.0, 374.0, 24.0, 24.0 ],
-					"svg" : ""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-5",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "multichannelsignal" ],
-					"patching_rect" : [ 140.0, 375.0, 53.0, 22.0 ],
-					"text" : "mc.*~ 0."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-7",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "multichannelsignal" ],
-					"patching_rect" : [ 62.0, 375.0, 53.0, 22.0 ],
-					"text" : "mc.*~ 1."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-22",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "multichannelsignal" ],
-					"patching_rect" : [ 140.0, 414.0, 68.0, 22.0 ],
-					"text" : "mc.stereo~"
 				}
 
 			}
@@ -276,7 +203,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 62.0, 453.0, 54.0, 22.0 ],
+					"patching_rect" : [ 62.0, 366.0, 54.0, 22.0 ],
 					"text" : "mc.dac~"
 				}
 
@@ -305,7 +232,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 4,
+							"revision" : 7,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -342,7 +269,6 @@
 											"parameter_longname" : "live.text[16]",
 											"parameter_mmax" : 1,
 											"parameter_modmode" : 0,
-											"parameter_osc_name" : "<default>",
 											"parameter_shortname" : "live.text[16]",
 											"parameter_type" : 2
 										}
@@ -420,7 +346,6 @@
 											"parameter_longname" : "live.dial[43]",
 											"parameter_mmax" : 200.0,
 											"parameter_modmode" : 0,
-											"parameter_osc_name" : "<default>",
 											"parameter_shortname" : "scaling",
 											"parameter_type" : 0,
 											"parameter_unitstyle" : 5
@@ -465,7 +390,6 @@
 											"parameter_longname" : "live.dial[10]",
 											"parameter_mmax" : 200.0,
 											"parameter_modmode" : 0,
-											"parameter_osc_name" : "<default>",
 											"parameter_shortname" : "scaling",
 											"parameter_type" : 0,
 											"parameter_unitstyle" : 5
@@ -506,7 +430,6 @@
 											"parameter_longname" : "live.tab",
 											"parameter_mmax" : 1,
 											"parameter_modmode" : 0,
-											"parameter_osc_name" : "<default>",
 											"parameter_shortname" : "live.tab",
 											"parameter_type" : 2,
 											"parameter_unitstyle" : 9
@@ -553,7 +476,6 @@
 											"parameter_longname" : "live.dial[3]",
 											"parameter_mmax" : 1000.0,
 											"parameter_modmode" : 0,
-											"parameter_osc_name" : "<default>",
 											"parameter_shortname" : " ",
 											"parameter_type" : 0,
 											"parameter_unitstyle" : 2
@@ -600,7 +522,6 @@
 											"parameter_longname" : "live.dial[2]",
 											"parameter_mmax" : 1000.0,
 											"parameter_modmode" : 0,
-											"parameter_osc_name" : "<default>",
 											"parameter_shortname" : " ",
 											"parameter_type" : 0,
 											"parameter_unitstyle" : 2
@@ -641,7 +562,6 @@
 											"parameter_longname" : "live.menu[1]",
 											"parameter_mmax" : 8,
 											"parameter_modmode" : 0,
-											"parameter_osc_name" : "<default>",
 											"parameter_shortname" : "live.menu",
 											"parameter_type" : 2
 										}
@@ -700,7 +620,6 @@
 											"parameter_longname" : "live.toggle[7]",
 											"parameter_mmax" : 1,
 											"parameter_modmode" : 0,
-											"parameter_osc_name" : "<default>",
 											"parameter_shortname" : "live.toggle",
 											"parameter_type" : 2
 										}
@@ -907,15 +826,10 @@
 								}
 
 							}
- ],
-						"originid" : "pat-319"
+ ]
 					}
 ,
 					"patching_rect" : [ 334.0, 237.0, 89.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"globalpatchername" : ""
-					}
-,
 					"text" : "p spat5Options"
 				}
 
@@ -948,7 +862,6 @@
 							"parameter_mmax" : 6.0,
 							"parameter_mmin" : -70.0,
 							"parameter_modmode" : 3,
-							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "mc.live.gain~",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 4
@@ -1003,6 +916,20 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-10", 0 ],
+					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-14", 0 ],
 					"source" : [ "obj-13", 0 ]
 				}
@@ -1045,36 +972,22 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-6", 1 ],
+					"destination" : [ "obj-11", 2 ],
+					"source" : [ "obj-2", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-11", 1 ],
 					"source" : [ "obj-2", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
+					"destination" : [ "obj-11", 0 ],
 					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
-					"source" : [ "obj-22", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-7", 1 ],
-					"source" : [ "obj-29", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-3", 0 ]
 				}
 
 			}
@@ -1089,22 +1002,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-42", 2 ],
 					"source" : [ "obj-38", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-29", 0 ],
-					"order" : 0,
-					"source" : [ "obj-4", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-5", 1 ],
-					"order" : 1,
-					"source" : [ "obj-4", 0 ]
 				}
 
 			}
@@ -1131,38 +1028,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
-					"order" : 0,
+					"destination" : [ "obj-8", 0 ],
 					"source" : [ "obj-47", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
-					"order" : 1,
-					"source" : [ "obj-47", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-22", 0 ],
-					"source" : [ "obj-5", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 1 ],
-					"source" : [ "obj-6", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
-					"source" : [ "obj-6", 0 ]
 				}
 
 			}
@@ -1182,13 +1049,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
-					"source" : [ "obj-7", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-71", 0 ]
 				}
@@ -1202,10 +1062,9 @@
 
 			}
  ],
-		"originid" : "pat-315",
 		"parameters" : 		{
+			"obj-10" : [ "mc.live.gain~[1]", "mc.live.gain~[1]", 0 ],
 			"obj-47" : [ "mc.live.gain~", "mc.live.gain~", 0 ],
-			"obj-6" : [ "live.gain~", "live.gain~", 0 ],
 			"obj-71::obj-10" : [ "live.tab", "live.tab", 0 ],
 			"obj-71::obj-14" : [ "live.toggle[7]", "live.toggle", 0 ],
 			"obj-71::obj-26" : [ "live.menu[1]", "live.menu", 0 ],
