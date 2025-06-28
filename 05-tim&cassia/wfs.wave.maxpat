@@ -10,16 +10,28 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 984.0, 275.0, 266.0, 611.0 ],
+		"rect" : [ 914.0, 226.0, 316.0, 664.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-10",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "float" ],
+					"patching_rect" : [ 20.0, 216.0, 41.0, 22.0 ],
+					"text" : "pow 2"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-6",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 132.0, 365.0, 29.5, 22.0 ],
+					"patching_rect" : [ 132.0, 397.0, 29.5, 22.0 ],
 					"text" : "- 1"
 				}
 
@@ -31,7 +43,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 132.0, 329.0, 77.0, 22.0 ],
+					"patching_rect" : [ 132.0, 361.0, 77.0, 22.0 ],
 					"text" : "loadmess #1"
 				}
 
@@ -43,7 +55,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 42.0, 402.0, 32.0, 22.0 ],
+					"patching_rect" : [ 42.0, 434.0, 32.0, 22.0 ],
 					"text" : "+ #2"
 				}
 
@@ -55,7 +67,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 42.0, 292.0, 29.5, 22.0 ],
+					"patching_rect" : [ 42.0, 324.0, 29.5, 22.0 ],
 					"text" : "- 1"
 				}
 
@@ -80,7 +92,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "float" ],
-					"patching_rect" : [ 20.0, 218.0, 207.0, 22.0 ],
+					"patching_rect" : [ 20.0, 250.0, 207.0, 22.0 ],
 					"text" : "t b f"
 				}
 
@@ -92,7 +104,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 42.0, 476.0, 58.0, 22.0 ],
+					"patching_rect" : [ 42.0, 508.0, 58.0, 22.0 ],
 					"text" : "wfs.scale"
 				}
 
@@ -104,7 +116,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "int" ],
-					"patching_rect" : [ 42.0, 329.0, 66.0, 22.0 ],
+					"patching_rect" : [ 42.0, 361.0, 66.0, 22.0 ],
 					"text" : "t i i"
 				}
 
@@ -116,7 +128,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 89.0, 365.0, 36.0, 22.0 ],
+					"patching_rect" : [ 89.0, 397.0, 36.0, 22.0 ],
 					"text" : "% #1"
 				}
 
@@ -128,7 +140,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 42.0, 439.0, 113.0, 22.0 ],
+					"patching_rect" : [ 42.0, 471.0, 113.0, 22.0 ],
 					"text" : "pack i f f"
 				}
 
@@ -140,7 +152,7 @@
 					"numinlets" : 6,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 89.0, 402.0, 83.0, 22.0 ],
+					"patching_rect" : [ 89.0, 421.0, 83.0, 22.0 ],
 					"text" : "scale 0 3 0. 1."
 				}
 
@@ -152,7 +164,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "bang", "bang", "int" ],
-					"patching_rect" : [ 20.0, 255.0, 41.0, 22.0 ],
+					"patching_rect" : [ 20.0, 287.0, 41.0, 22.0 ],
 					"text" : "uzi #1"
 				}
 
@@ -164,7 +176,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 42.0, 513.0, 78.0, 22.0 ],
+					"patching_rect" : [ 42.0, 545.0, 78.0, 22.0 ],
 					"text" : "wfs.toSource"
 				}
 
@@ -213,7 +225,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 42.0, 550.0, 30.0, 30.0 ]
+					"patching_rect" : [ 42.0, 582.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -241,6 +253,13 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-9", 0 ],
+					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-10", 0 ],
 					"source" : [ "obj-11", 0 ]
 				}
 
@@ -275,7 +294,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-32", 1 ],
+					"destination" : [ "obj-32", 2 ],
 					"source" : [ "obj-22", 0 ]
 				}
 
@@ -359,8 +378,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-32", 2 ],
-					"midpoints" : [ 217.5, 430.74609375, 145.5, 430.74609375 ],
+					"destination" : [ "obj-32", 1 ],
+					"midpoints" : [ 217.5, 462.74609375, 98.5, 462.74609375 ],
 					"source" : [ "obj-9", 1 ]
 				}
 

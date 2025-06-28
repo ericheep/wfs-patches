@@ -146,9 +146,9 @@
 			}
 , 			{
 				"box" : 				{
-					"addpoints" : [ 0.0, 0.0, 0, 10.0, 1.0, 0, 20.0, 0.0, 0 ],
+					"addpoints" : [ 0.0, 0.0, 0, 7.100000279537741, 1.0, 0, 14.200000559075482, 0.0, 0 ],
 					"classic_curve" : 1,
-					"domain" : 20.0,
+					"domain" : 14.199999809265137,
 					"id" : "obj-8",
 					"maxclass" : "function",
 					"numinlets" : 1,
@@ -161,9 +161,9 @@
 			}
 , 			{
 				"box" : 				{
-					"addpoints" : [ 0.0, 0.0, 0, 50.0, 1.0, 0, 100.0, 0.0, 0 ],
+					"addpoints" : [ 0.0, 0.0, 0, 35.5, 1.0, 0, 71.0, 0.0, 0 ],
 					"classic_curve" : 1,
-					"domain" : 100.0,
+					"domain" : 71.0,
 					"id" : "obj-7",
 					"maxclass" : "function",
 					"numinlets" : 1,
@@ -217,10 +217,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 101.0, 556.0, 42.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"attr_comment" : ""
-					}
-,
 					"text" : "out~ 1"
 				}
 
@@ -305,10 +301,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 38.0, 11.0, 28.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"attr_comment" : ""
-					}
-,
 					"text" : "in 1"
 				}
 

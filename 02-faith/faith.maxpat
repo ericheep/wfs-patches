@@ -10,9 +10,33 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 441.0, 347.0, 733.0, 530.0 ],
+		"rect" : [ 49.0, 219.0, 733.0, 530.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 528.0, 370.0, 58.0, 22.0 ],
+					"text" : "wfs.scale"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "multichannelsignal" ],
+					"patching_rect" : [ 62.0, 195.0, 58.0, 22.0 ],
+					"text" : "mc.tanh~"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-11",
 					"maxclass" : "newobj",
@@ -69,20 +93,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 528.0, 460.0, 81.0, 22.0 ],
+					"patching_rect" : [ 528.0, 446.0, 81.0, 22.0 ],
 					"text" : "s wfs.sources"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-60",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"patching_rect" : [ 528.0, 323.0, 29.5, 22.0 ],
-					"text" : "+ 1"
 				}
 
 			}
@@ -93,7 +105,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 528.0, 384.0, 53.0, 22.0 ],
+					"patching_rect" : [ 528.0, 334.0, 53.0, 22.0 ],
 					"text" : "pack i f f"
 				}
 
@@ -105,7 +117,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 528.0, 423.0, 78.0, 22.0 ],
+					"patching_rect" : [ 528.0, 409.0, 78.0, 22.0 ],
 					"text" : "wfs.toSource"
 				}
 
@@ -238,7 +250,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 1800.0, 167.0, 1000.0, 755.0 ],
+						"rect" : [ 134.0, 172.0, 1000.0, 755.0 ],
 						"gridsize" : [ 15.0, 15.0 ],
 						"boxes" : [ 							{
 								"box" : 								{
@@ -885,7 +897,7 @@
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "spat5.viewer @initwith \"/source/number 5, /speaker/number 64\"",
+					"text" : "spat5.viewer @initwith \"/source/number 3, /speaker/number 64\"",
 					"varname" : "spat5.viewer"
 				}
 
@@ -902,7 +914,7 @@
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "spat5.wfs~ @sources 5 @speakers 64 @mc 1"
+					"text" : "spat5.wfs~ @sources 3 @speakers 64 @mc 1"
 				}
 
 			}
@@ -916,7 +928,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
+					"destination" : [ "obj-3", 0 ],
 					"source" : [ "obj-10", 0 ]
 				}
 
@@ -993,6 +1005,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-42", 1 ],
 					"source" : [ "obj-35", 0 ]
 				}
@@ -1007,7 +1026,14 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-60", 0 ],
+					"destination" : [ "obj-41", 0 ],
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-42", 0 ],
 					"source" : [ "obj-40", 0 ]
 				}
 
@@ -1021,7 +1047,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-41", 0 ],
+					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-42", 0 ]
 				}
 
@@ -1030,13 +1056,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
 					"source" : [ "obj-47", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-42", 0 ],
-					"source" : [ "obj-60", 0 ]
 				}
 
 			}
@@ -1099,6 +1118,13 @@
 			}
 , 			{
 				"name" : "wfs.64speakerConfig.maxpat",
+				"bootpath" : "~/git/wfs-patches/02-faith",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "wfs.scale.maxpat",
 				"bootpath" : "~/git/wfs-patches/02-faith",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",

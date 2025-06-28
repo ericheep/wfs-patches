@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 698.0, 623.0, 361.0, 251.0 ],
+		"rect" : [ 570.0, 435.0, 542.0, 251.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
 				"box" : 				{
@@ -19,8 +19,8 @@
 					"numinlets" : 6,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 256.0, 111.0, 93.0, 22.0 ],
-					"text" : "scale 0. 1. 9 2.5"
+					"patching_rect" : [ 256.0, 111.0, 110.0, 22.0 ],
+					"text" : "scale 0. 1. 17.5 2.5"
 				}
 
 			}
@@ -31,8 +31,8 @@
 					"numinlets" : 6,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 140.0, 111.0, 107.0, 22.0 ],
-					"text" : "scale 0. 1. -2.5 2.5"
+					"patching_rect" : [ 140.0, 111.0, 94.0, 22.0 ],
+					"text" : "scale 0. 1. -5. 5."
 				}
 
 			}
